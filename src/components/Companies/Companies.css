@@ -1,0 +1,7 @@
+.Companies {
+  height: 100%;
+  display: flex;
+  width: 100%;
+  margin: 3rem 0 0 0;
+  box-sizing: border-box;
+}

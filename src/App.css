@@ -1,38 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Khand&display=swap");
+
+:root {
+  --primary-color: #041c32;
+  --secondry-color: #04293a;
+  --highlight-color: #064663;
+  --accent-color: #ecb365;
+  --accent-hover: #d59437;
+  --text-color: #eeeeee;
+  --text-faded: #8bb4d0;
+  --font-fam: "khand", sans-serif;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  font-family: var(--font-fam);
 }
 
-.App-link {
-  color: #61dafb;
+#themeButton {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  width: fit-content;
+  height: fit-content;
+  background-color: var(--secondry-color);
+  border-radius: 50%;
+  /* box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25); */
+  box-shadow: 0 0 10px 0 var(--accent-color);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#themeButton .MuiIconButton-root {
+  width: 3rem;
+  height: 3rem;
+  color: var(--accent-color);
 }

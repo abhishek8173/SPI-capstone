@@ -1,0 +1,206 @@
+.JobRoles {
+  width: 100%;
+  height: 30rem;
+  background-color: var(--secondry-color);
+  border-radius: 1rem;
+  box-sizing: border-box;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.JobRoles h2 {
+  color: var(--text-color);
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+.jobRoles__searchContainer {
+  height: 22rem;
+  border: 1px solid var(--highlight-color);
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.jobRoles__categoriesContainer {
+  flex: 0.3;
+  box-sizing: border-box;
+  border-right: 1px solid var(--highlight-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.categoryHeader {
+  display: flex;
+  height: 4rem;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  align-items: center;
+  box-sizing: border-box;
+  box-shadow: 0 10px 10px -7px var(--primary-color);
+  border-bottom: 1px solid var(--highlight-color);
+}
+
+.categoryHeader h3 {
+  color: var(--text-color);
+  padding: 1rem;
+  margin: 0 auto 0 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.categoryHeader .MuiIconButton-root {
+  color: var(--text-faded);
+  padding: 1rem;
+}
+
+.jobRoles__categories {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--highlight-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-faded);
+}
+
+.categoryBox {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.category {
+  width: 90%;
+  margin: 0.5rem;
+  height: 2.5rem;
+  padding: 0.5rem 15%;
+  box-sizing: border-box;
+  color: var(--text-faded);
+  border-radius: 0.5rem;
+}
+
+.divider {
+  height: 1px;
+  width: 80%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--highlight-color);
+}
+
+.category:hover {
+  border: 2px solid var(--highlight-color);
+}
+
+.category:active {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.jobRoles__search {
+  flex: 0.7;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.jobRoles__search input {
+  font-size: 1rem;
+  color: var(--text-color);
+  font-family: var(--font-fam);
+  background-color: transparent;
+  border: 1px solid var(--highlight-color);
+  border-radius: 0.5rem;
+  height: 2rem;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.jobRoles__search input::placeholder {
+  color: var(--text-faded);
+}
+
+.jobRoles__search input:focus {
+  outline: 1px solid var(--accent-color);
+}
+
+.jobRoles__list {
+  flex: 1;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  border: 1px solid var(--highlight-color);
+}
+
+.jobCard {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  background-color: var(--secondry-color);
+}
+
+.jobCard__left {
+  color: var(--text-color);
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  box-sizing: border-box;
+}
+
+.jobCard__left p {
+  color: var(--text-faded);
+}
+
+.jobCard__right {
+  display: flex;
+  gap: 1rem;
+  height: 100%;
+  align-items: center;
+  color: var(--text-faded);
+  box-sizing: border-box;
+}
+
+.jobCard__right .MuiIconButton-root {
+  color: var(--text-faded);
+}
