@@ -1,6 +1,9 @@
 import React from "react";
 import "./JobRoles.css";
 import AddIcon from "@mui/icons-material/Add";
+import SearchIcon from "@mui/icons-material/Search";
+import SortIcon from "@mui/icons-material/Sort";
+import FilterListIcon from "@mui/icons-material/FilterList";
 import { IconButton } from "@mui/material";
 import CategoryBox from "./CategoryBox/CategoryBox";
 import JobCard from "./JobCard/JobCard";
@@ -13,7 +16,7 @@ const JobRoles = () => {
       <div className="jobRoles__searchContainer">
         <div className="jobRoles__categoriesContainer">
           <div className="categoryHeader">
-            <h3>Select Categories</h3>
+            <h3>Select Field(s)</h3>
             <IconButton>
               <AddIcon />
             </IconButton>
@@ -25,7 +28,21 @@ const JobRoles = () => {
           </div>
         </div>
         <div className="jobRoles__search">
-          <input type="text" placeholder="Search by Job name or Job no." />
+          <div className="jobRoles__searchBar">
+            <input type="text" placeholder="Search by Job name or Job no." />
+            <IconButton>
+              <SearchIcon />
+            </IconButton>
+            <IconButton>
+              <SortIcon />
+            </IconButton>
+            <IconButton>
+              <FilterListIcon />
+            </IconButton>
+            <IconButton>
+              <AddIcon />
+            </IconButton>
+          </div>
           <div className="jobRoles__list">
             {arr.map((i) => (
               <JobCard />

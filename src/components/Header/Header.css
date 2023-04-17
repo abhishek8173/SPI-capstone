@@ -8,9 +8,15 @@
   top: 0;
   left: 0;
   right: 0;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0) 25%
+  );
   border-bottom: 2px solid var(--secondry-color);
   align-items: center;
   justify-content: center;
+  z-index: 10;
 }
 
 .header__links {
@@ -32,7 +38,7 @@
   box-sizing: border-box;
   margin: 0;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 
@@ -59,7 +65,7 @@
 }
 
 .header__right .MuiButton-root {
-  color: var(--text-faded);
+  color: var(--text-color);
   border-color: #064663;
   width: 10rem;
   box-sizing: border-box;
@@ -73,7 +79,6 @@
 .header__right .MuiButton-root:hover {
   border-color: #ecb365;
   box-shadow: 0 0 0 2px #ecb365 inset;
-  background-color: rgba(0, 0, 0, 0.2);
   color: #ecb365;
 }
 
@@ -88,7 +93,7 @@
   color: var(--text-color);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 850px) {
   .header__right {
     gap: 0.5rem;
   }

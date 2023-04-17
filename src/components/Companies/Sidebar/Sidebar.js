@@ -4,6 +4,7 @@ import "./Sidebar.css";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import DashboardIcon from "@mui/icons-material/Dashboard";
+import NotificationsIcon from "@mui/icons-material/Notifications";
 
 const Sidebar = () => {
   return (
@@ -22,7 +23,7 @@ const Sidebar = () => {
       <div className="company__navigation">
         <p>Tools</p>
         <Button variant="text" startIcon={<AddCircleIcon />}>
-          Add New Job Role
+          New Job Role
         </Button>
         <Button variant="text" startIcon={<DashboardIcon />}>
           Dashboard
@@ -33,6 +34,9 @@ const Sidebar = () => {
         <p>Account</p>
         <Button variant="text" startIcon={<AccountBoxIcon />}>
           Profile
+        </Button>
+        <Button variant="text" startIcon={<NotificationsIcon />}>
+          Notifications
         </Button>
       </div>
     </div>

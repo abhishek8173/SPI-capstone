@@ -1,0 +1,64 @@
+.TextFieldCustom {
+  margin: 1rem 0 1rem 0;
+  max-width: 800px;
+  min-width: 200px;
+  position: relative;
+  height: 3rem;
+  display: flex;
+  box-sizing: border-box;
+  box-shadow: -2px 5px 5px 0 var(--primary-color);
+  border-radius: 0.3rem;
+}
+
+.TextFieldCustom input {
+  font-size: 1rem;
+  padding: 0.8rem;
+  padding-left: 1rem;
+  outline: none;
+  background-color: transparent;
+  border-radius: 0.3rem;
+  width: 100%;
+  color: var(--text-faded);
+  box-sizing: border-box;
+}
+
+.TextFieldCustom label {
+  font-size: 1rem;
+  position: absolute;
+  left: 0;
+  padding: 0 0.4rem;
+  height: 4px;
+  display: flex;
+  align-items: center;
+  overflow-wrap: normal;
+  box-sizing: border-box;
+  margin: 0rem;
+  margin-left: 1.3rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: var(--text-faded);
+
+  background-color: var(--secondry-color);
+  transform: translateY(-50%) scale(0.9);
+}
+
+.TextFieldCustom :is(input:focus) ~ label {
+  color: var(--text-color);
+}
+
+.TextFieldCustom :is(input:focus, input:valid) {
+  border: 1px solid var(--highlight-color);
+}
+
+.TextFieldCustom:hover :is(input:focus, input:valid) {
+  border: 2px solid var(--text-color);
+}
+
+.TextFieldCustom:focus-within :is(input:focus, input:valid) {
+  border: 2px solid var(--text-color);
+}
+
+.TextFieldCustom :is(input:invalid) {
+  border-color: red;
+  outline: none;
+}

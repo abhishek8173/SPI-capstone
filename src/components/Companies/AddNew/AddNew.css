@@ -1,0 +1,172 @@
+.AddNewContainer {
+  flex: 1;
+  box-sizing: border-box;
+  padding: 1rem;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  margin: 0;
+  margin-bottom: 3rem;
+}
+
+.AddNew::before {
+  content: "";
+  box-shadow: 0 3rem 1rem 1.5rem var(--primary-color);
+  margin: 0;
+  padding: 0;
+  width: 70vw;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+
+.AddNew {
+  flex: 1;
+  min-width: fit-content;
+  box-sizing: border-box;
+  margin: 1rem;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: var(--secondry-color);
+}
+
+.AddNew h2 {
+  margin: 0;
+  margin-right: auto;
+  padding: 0;
+  width: 100%;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--highlight-color);
+}
+
+.addRole {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+.addRole p {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.addRole p::after {
+  content: "";
+  background-color: var(--highlight-color);
+  height: 1px;
+  flex: 1;
+}
+
+.comboTextField {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#skillsList li {
+  margin-bottom: 1rem;
+}
+
+.skillTextField {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 5%;
+}
+
+.skillTextField .MuiSlider-root {
+  width: 25%;
+  color: var(--text-faded);
+}
+
+.skillTextField .MuiSlider-thumb {
+  color: var(--text-color);
+}
+
+.skillTextField .MuiSlider-thumb:hover {
+  color: var(--accent-color);
+}
+
+.skillTextField .MuiSlider-markLabel {
+  color: var(--text-faded);
+  font-family: var(--font-fam);
+}
+
+.skillTextField .MuiIconButton-root {
+  color: var(--text-faded);
+}
+
+#deleteIcon:hover .MuiSvgIcon-root {
+  color: var(--accent-color);
+}
+
+#addSkillButton {
+  color: var(--text-faded);
+  height: 4rem;
+  width: 4rem;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+#addSkillButton:hover {
+  color: var(--accent-color);
+}
+
+#addSkillButton .MuiSvgIcon-root {
+  scale: 2;
+}
+
+#submitButton {
+  width: 7rem;
+  margin-left: auto;
+  margin-right: 10%;
+  margin-top: 2rem;
+  font-size: 1.125rem;
+  color: var(--text-color);
+  background-color: var(--accent-color);
+  font-family: var(--font-fam);
+  text-shadow: -1px 1px var(--secondry-color);
+  font-weight: bold;
+}
+
+#submitButton:hover {
+  background-color: var(--accent-hover);
+}
+
+.addRole label {
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-faded);
+  box-sizing: border-box;
+}
+
+.addRole label span {
+  font-weight: normal;
+}
+
+.addRole textarea {
+  width: 62.5%;
+  color: var(--text-faded);
+  border-color: var(--highlight-color);
+  background: transparent;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  box-shadow: -2px 5px 5px 0 var(--primary-color);
+}
+
+.addRole textarea:focus {
+  outline: 2px solid var(--text-color);
+}

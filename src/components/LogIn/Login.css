@@ -1,0 +1,136 @@
+.login {
+  position: absolute;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondry-color);
+  display: flex;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#login__left {
+  width: 30%;
+  max-width: 400px !important;
+  min-width: 200px;
+  border-right: 1px solid var(--text-color);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+#login__head {
+  height: 100px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0)
+  );
+  box-sizing: border-box;
+  margin-bottom: 2rem;
+  padding: 10px;
+}
+
+#login__head img {
+  height: 80px;
+  box-sizing: border-box;
+}
+#uname {
+  box-sizing: border-box !important;
+  margin: 1rem;
+  height: 3rem;
+  font-size: 1.25rem;
+  color: var(--text-color) !important;
+  background: transparent !important;
+  border: none;
+  border-radius: 0.25rem;
+  border: 1px solid var(--text-faded) !important;
+  padding-left: 0.5rem;
+}
+
+#uname:focus {
+  outline: 1px solid var(--text-color);
+}
+
+#passField {
+  box-sizing: border-box;
+  margin: 1rem;
+  display: flex;
+  padding-right: 0.5rem;
+  border: 1px solid var(--text-faded);
+  border-radius: 0.25rem;
+}
+
+#passField:focus-within {
+  outline: 1px solid var(--text-color);
+}
+
+#passField .MuiIconButton-root {
+  box-sizing: border-box;
+  background-color: transparent;
+  aspect-ratio: 1;
+  width: 2rem;
+  color: var(--text-faded);
+}
+
+#pass {
+  box-sizing: border-box;
+  height: 3rem;
+  color: var(--text-color) !important;
+  width: 90% !important;
+  font-size: 1.25rem;
+  background-color: transparent;
+  border: none;
+  padding-left: 0.5rem;
+}
+
+#pass:focus {
+  outline: none;
+}
+
+#login__left a {
+  margin-left: 1rem;
+  color: #5295ff;
+}
+
+#login__left p {
+  color: var(--text-faded);
+  margin-left: 1rem;
+  margin-bottom: 0;
+}
+
+#login__left .MuiButton-contained {
+  margin: 1rem;
+  height: 3rem;
+  font-size: 1.125rem;
+  background-color: var(--accent-color);
+}
+
+#login__left .MuiButton-contained:hover {
+  background-color: var(--accent-hover);
+}
+
+#login__left .MuiDivider-root {
+  margin: 2rem 2rem 1rem;
+  background-color: var(--text-faded);
+}
+
+#login__left .MuiButton-outlined {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+  background-color: var(--primary-color);
+  border-width: 2px;
+  margin: 1rem;
+  height: 3rem;
+  font-size: 1.125rem;
+}
+
+#login__right {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url("../../assets/loginSideImage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

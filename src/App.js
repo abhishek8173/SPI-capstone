@@ -7,7 +7,7 @@ import DarkModeIcon from "@mui/icons-material/DarkMode";
 import { IconButton } from "@mui/material";
 
 function App() {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
   const handleTheme = () => {
     if (theme === "dark") setTheme("light");
     else setTheme("dark");
@@ -21,8 +21,8 @@ function App() {
       document.getElementById("themeButton").style.boxShadow =
         "0 0 10px 0 #ecb365";
     } else {
-      document.documentElement.style.setProperty("--primary-color", "#B0B0B0");
-      document.documentElement.style.setProperty("--secondry-color", "#EEEEEE");
+      document.documentElement.style.setProperty("--primary-color", "#808080");
+      document.documentElement.style.setProperty("--secondry-color", "#CCCCCC");
       document.documentElement.style.setProperty("--text-color", "#363636");
       document.documentElement.style.setProperty("--text-faded", "#415562");
       document.getElementById("themeButton").style.boxShadow =

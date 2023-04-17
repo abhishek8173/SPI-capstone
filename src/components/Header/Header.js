@@ -10,7 +10,7 @@ import ContactSupportIcon from "@mui/icons-material/ContactSupport";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 const Header = () => {
-  const mobile = useMediaQuery("(min-width:600px)");
+  const mobile = useMediaQuery("(min-width:650px)");
   const [page, setPage] = useState("Home");
   const handlePage = (curr) => {
     setPage(curr);

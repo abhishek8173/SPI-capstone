@@ -8,7 +8,7 @@ const JobCard = () => {
     <div className="jobCard">
       <div className="jobCard__left">
         <h4>Job Role</h4>
-        <p>Category</p>
+        <p>Categories</p>
       </div>
       <div className="jobCard__right">
         <p>Updated: DD/MM/YYYY</p>

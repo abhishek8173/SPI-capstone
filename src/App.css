@@ -25,6 +25,7 @@
   position: absolute;
   bottom: 2rem;
   right: 2rem;
+  z-index: 100;
   width: fit-content;
   height: fit-content;
   background-color: var(--secondry-color);
@@ -37,4 +38,32 @@
   width: 3rem;
   height: 3rem;
   color: var(--accent-color);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--highlight-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-faded);
 }
