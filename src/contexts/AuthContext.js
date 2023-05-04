@@ -22,7 +22,7 @@ export const AuthContextProvider = ({ children }) => {
         if (res.data.valid) {
           localStorage.setItem("user", res.data);
           setUser(res.data);
-          navigate("companies/home");
+          navigate("home");
         } else {
           alert("Wrong Password!!!");
         }
