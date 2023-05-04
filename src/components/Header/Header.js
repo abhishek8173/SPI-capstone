@@ -3,7 +3,6 @@ import "./Header.css";
 import Logo from "../../assets/SPI logo.svg";
 import { useState } from "react";
 import { Button } from "@mui/material";
-import StorageIcon from "@mui/icons-material/Storage";
 import AssessmentIcon from "@mui/icons-material/Assessment";
 import BusinessIcon from "@mui/icons-material/Business";
 import ContactSupportIcon from "@mui/icons-material/ContactSupport";
@@ -27,15 +26,6 @@ const Header = () => {
           />
         </div>
         <div className="header__right">
-          <Button
-            variant={page === "Resources" ? "contained" : "outlined"}
-            onClick={() => {
-              handlePage("Resources");
-            }}
-            startIcon={mobile ? <StorageIcon /> : null}
-          >
-            {mobile ? "Resources" : <StorageIcon />}
-          </Button>
           <Button
             variant={page === "Assessment" ? "contained" : "outlined"}
             onClick={() => {

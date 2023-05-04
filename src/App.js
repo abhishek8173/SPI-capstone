@@ -1,10 +1,15 @@
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useEffect, createContext, useState, useContext } from "react";
 import Companies from "./components/Companies/Companies";
 import Header from "./components/Header/Header";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import { IconButton } from "@mui/material";
+import { AuthContextProvider } from "./contexts/AuthContext";
+import { Routes, Route } from "react-router-dom";
+import Assessment from "./components/Assessment/Assessment";
+
+const ThemeContext = createContext();
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -31,15 +36,24 @@ function App() {
   }, [theme]);
   return (
     <div className="App">
-      <Header />
-      <Companies />
-      <div id="themeButton">
-        <IconButton onClick={handleTheme}>
-          {theme === "dark" ? <LightModeIcon /> : <DarkModeIcon />}
-        </IconButton>
-      </div>
+      <ThemeContext.Provider value={{ theme, handleTheme }}>
+        <AuthContextProvider>
+          <Header />
+          <Routes>
+            <Route path="/*" element={<Companies />} />
+            <Route path="assessment/*" element={<Assessment />} />
+          </Routes>
+          <div id="themeButton">
+            <IconButton onClick={handleTheme}>
+              {theme === "dark" ? <LightModeIcon /> : <DarkModeIcon />}
+            </IconButton>
+          </div>
+        </AuthContextProvider>
+      </ThemeContext.Provider>
     </div>
   );
 }
-
+export const Theme = () => {
+  return useContext(ThemeContext);
+};
 export default App;

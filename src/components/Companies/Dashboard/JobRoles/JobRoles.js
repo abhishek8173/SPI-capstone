@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./JobRoles.css";
 import AddIcon from "@mui/icons-material/Add";
 import SearchIcon from "@mui/icons-material/Search";
@@ -7,9 +7,16 @@ import FilterListIcon from "@mui/icons-material/FilterList";
 import { IconButton } from "@mui/material";
 import CategoryBox from "./CategoryBox/CategoryBox";
 import JobCard from "./JobCard/JobCard";
+import { useNavigate } from "react-router-dom";
 
-const JobRoles = () => {
-  const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+const JobRoles = (props) => {
+  const categories = props.jobCategories;
+  const [category, setCategory] = useState({});
+  const navigate = useNavigate();
+  const categoryClickHandler = (indx) => {
+    console.log(indx);
+    setCategory(categories[indx]);
+  };
   return (
     <div className="JobRoles">
       <h2>Job Roles</h2>
@@ -17,13 +24,14 @@ const JobRoles = () => {
         <div className="jobRoles__categoriesContainer">
           <div className="categoryHeader">
             <h3>Select Field(s)</h3>
-            <IconButton>
-              <AddIcon />
-            </IconButton>
           </div>
           <div className="jobRoles__categories">
-            {arr.map((i) => (
-              <CategoryBox />
+            {categories.map((i, indx) => (
+              <CategoryBox
+                name={i.category}
+                click={() => categoryClickHandler(indx)}
+                key={i._id}
+              />
             ))}
           </div>
         </div>
@@ -39,14 +47,15 @@ const JobRoles = () => {
             <IconButton>
               <FilterListIcon />
             </IconButton>
-            <IconButton>
+            <IconButton onClick={() => navigate("addnew")}>
               <AddIcon />
             </IconButton>
           </div>
           <div className="jobRoles__list">
-            {arr.map((i) => (
-              <JobCard />
-            ))}
+            {category.jobs &&
+              category.jobs.map((i) => (
+                <JobCard name={i.name} updated={i.date} key={i._id} />
+              ))}
           </div>
         </div>
       </div>

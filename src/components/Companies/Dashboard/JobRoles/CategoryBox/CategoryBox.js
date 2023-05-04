@@ -1,9 +1,11 @@
 import React from "react";
 
-const CategoryBox = () => {
+const CategoryBox = (props) => {
   return (
     <div className="categoryBox">
-      <div className="category">Category</div>
+      <div onClick={props.click} className="category">
+        {props.name}
+      </div>
       <div className="divider"></div>
     </div>
   );

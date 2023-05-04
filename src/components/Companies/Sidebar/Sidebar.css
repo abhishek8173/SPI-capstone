@@ -1,5 +1,5 @@
 .Sidebar {
-  height: 100%;
+  height: calc(100%-3rem);
   width: 25%;
   max-width: 25rem;
   background-color: var(--secondry-color);
@@ -21,19 +21,21 @@
   flex-direction: column;
 }
 
-#company__info h2 {
+#company__info h1 {
   color: var(--accent-color);
+  text-shadow: -1px 1px var(--primary-color);
   margin: 0;
   padding: 0;
 }
 
-#company__info h3 {
+#company__info h2 {
   color: var(--text-color);
   margin: 0.5rem 0 0;
 }
 
 #company__info p {
   color: var(--text-faded);
+  font-size: 1.25rem;
   margin: 0.5rem 0 0;
 }
 
@@ -41,7 +43,7 @@
   background-color: var(--highlight-color);
 }
 
-#company__loginButton {
+#company__authButton {
   width: fit-content;
   margin-left: auto;
   margin-right: 0;
@@ -53,7 +55,7 @@
 .Sidebar .MuiButton-contained {
   background-color: var(--accent-color);
   color: var(--text-color);
-  box-sizing: border-box;
+  font-size: 1.2rem;
   font-weight: bold;
   font-family: "Khand", sans-serif;
   text-shadow: -1px 1px var(--secondry-color);
@@ -66,7 +68,6 @@
 .company__navigation {
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
   margin: 0.5rem 1rem;
   gap: 0.5rem;
   align-items: center;
@@ -75,7 +76,7 @@
 .company__navigation p {
   color: var(--text-color);
   width: 100%;
-  box-sizing: border-box;
+  font-size: 1.15rem;
   margin: 0.5rem 0;
   font-style: italic;
   padding-left: 1rem;
@@ -83,11 +84,11 @@
 
 .Sidebar .MuiButton-text {
   color: var(--text-faded);
-  font-size: 1rem;
+  font-size: 1.25rem;
   width: 100%;
-  height: 3rem;
+  height: 4rem;
+  margin-bottom: 1rem;
   justify-content: left;
-  box-sizing: border-box;
   padding-left: 2rem;
   text-transform: none;
   font-family: "Khand", sans-serif;
@@ -100,6 +101,6 @@
 }
 
 .Sidebar .MuiButton-startIcon {
-  scale: 1.5;
+  scale: 1.75;
   margin-right: 2rem;
 }

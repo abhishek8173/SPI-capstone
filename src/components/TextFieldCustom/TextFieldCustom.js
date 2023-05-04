@@ -18,7 +18,7 @@ const TextFieldCustom = (props) => {
         min={props.min}
         max={props.max}
       />
-      <label for={props.id}>{props.label}</label>
+      <label style={{ backgroundColor: props.bgColor }}>{props.label}</label>
     </div>
   );
 };

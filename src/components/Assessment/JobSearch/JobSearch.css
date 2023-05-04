@@ -1,0 +1,17 @@
+.JobSearch {
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column;
+}
+
+.Csearch {
+  width: 100;
+  display: flex !important;
+  align-items: center;
+}
+
+#companySearchBtn {
+  position: relative;
+  left: -3rem;
+  color: var(--text-color);
+}

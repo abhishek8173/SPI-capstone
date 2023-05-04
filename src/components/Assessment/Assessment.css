@@ -1,7 +1,9 @@
-.Companies {
+.Assessment {
   height: calc(100vh - 3rem);
   display: flex;
+  flex-direction: column;
   width: 100%;
   margin: 3rem 0 0 0;
   box-sizing: border-box;
+  padding: 1rem;
 }

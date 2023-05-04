@@ -1,7 +1,9 @@
 import axios from "axios";
 
-const instance = axios.create({
-  baseURL: "https://whtsappcloneback-end.onrender.com",
+export const authInstance = axios.create({
+  baseURL: "https://spi-auth.onrender.com",
 });
 
-export default instance;
+export const opsInstance = axios.create({
+  baseURL: "https://spi-backend.onrender.com",
+});
